@@ -1,0 +1,1102 @@
+/* @font-face {
+    font-family: 'RushfordClean';
+    src: url('path/to/fonts/Rushfordclean-rgz89.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'EveryRun';
+    src: url('path/to/fonts/EveryRunRegular-ZV5pK.ttf') format('truetype');
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+
+
+:root {
+    --mainColor: #FF6A00;
+    --secondColor: #FFFFF0;
+    --touchColor: #1A1A1A;
+}
+
+html {
+    font-size: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'RushfordClean', sans-serif;  */
+    font-family: "Passion One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+.font2 {
+    font-family: "Bangers", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Use EveryRun font specifically where needed, e.g., for headings */
+h1,
+h2,
+h3 {
+    /* font-family: 'EveryRun', sans-serif; */
+    font-family: "Bangers", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--secondColor);
+    font-size: 16px;
+    color: #000;
+}
+
+body,
+html {
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.hide {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 0px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+
+/* Nav */
+header {
+    height: 70px;
+    width: 100%;
+    border-bottom: 1px solid black;
+    margin: 0px;
+    padding: 0px;
+    z-index: 1;
+}
+
+header nav div h1 {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+}
+
+header h1 span {
+    margin-left: -20px;
+    color: var(--secondColor) !important;
+    font-family: "Bangers", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header h1 a {
+    animation: bottom 0.5s;
+}
+
+@keyframes bottom {
+    from {
+        margin-bottom: -30px;
+        opacity: 0;
+    }
+
+    to {
+        margin-bottom: 0px;
+        opacity: 1;
+    }
+}
+
+header nav.myNav {
+    height: 100%;
+    width: 100%;
+}
+
+.myNav {
+    background-color: var(--touchColor) !important;
+}
+
+.nav-ul {
+    height: 100%;
+}
+
+.nav-ul li {
+    margin-right: 20px;
+    position: relative;
+    font-size: 1.2rem;
+
+}
+
+.nav-ul> :nth-child(1) {
+    animation: bottom 0.2s;
+}
+
+.nav-ul> :nth-child(2) {
+    animation: bottom 0.8s;
+}
+
+.nav-ul> :nth-child(3) {
+    animation: bottom 1.4s;
+}
+
+.container-fluid {
+    height: 100%;
+}
+
+
+.nav-ul li a::before {
+    transition: 0.5s;
+    background-color: var(--mainColor);
+    content: "";
+    display: block;
+    width: 0px;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.nav-ul li a:hover::before {
+    width: 100%;
+}
+
+body section {
+    transition: 1s;
+}
+
+.navbar {
+    padding: 0;
+}
+
+.navbar-text {
+    height: 100% !important;
+}
+
+header nav div h1 a span {
+    margin-top: 10px;
+}
+
+.link {
+    margin-top: 10px !important;
+}
+
+@keyframes bottomHeader {
+    from {
+        margin-bottom: -20px;
+        opacity: 0;
+    }
+
+    to {
+        margin-bottom: 10px;
+        opacity: 1;
+    }
+}
+
+@media (min-width: 992px) {
+    .myDrop:hover .dropdown-menu {
+        display: block;
+    }
+
+    .nav-ul li a {
+        color: var(--secondColor) !important;
+    }
+
+    .myDrop ul {
+        background-color: var(--touchColor);
+    }
+
+    .myDropDown {
+        --bs-dropdown-link-hover-bg: var(--touchColor);
+    }
+
+    .label {
+        margin-top: 0px !important;
+    }
+
+    header {
+        position: fixed;
+
+    }
+
+}
+
+@media (max-width: 992px) {
+
+    header nav div h1 {
+        margin: 0px;
+    }
+
+    .container-fluid {
+        margin-top: -25px;
+    }
+
+    header nav div h1 {
+        margin-top: 10px;
+    }
+
+    header nav div h1 a span {
+        font-size: 1.5rem;
+    }
+
+    header nav div h1 :nth-child(2) {
+        margin-left: -15px;
+        margin-bottom: 10px;
+        animation: bottomHeader 1s ease;
+    }
+
+    header nav div h1 :nth-child(1) {
+        margin-left: -10px;
+
+    }
+
+    header nav div h1 a img {
+        height: 50px;
+    }
+    .homeBody .myNav a {
+        color: var(--secondColor) !important;
+    }
+    .homeBody .active{
+        color: var(--secondColor);
+    }
+
+
+    .homeBody .dropdown-menu {
+        background-color: rgba(0, 0, 0, 0);
+        animation: 1s;
+    }
+
+    .homeBody .dropdown-menu li a:hover {
+        background-color: var(--touchColor) !important;
+
+    }
+
+    .home section h2 {
+        font-size: 3rem !important;
+    }
+}
+
+
+
+.navbar-toggler {
+
+    border: var(--mainColor) solid 2px;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    background-color: var(--secondColor);
+    animation: 1s;
+}
+
+/*----------------------------------------------------------------*/
+
+/* Remove the default background image for the navbar-toggler-icon */
+.navbar-toggler-icon {
+    background-image: none;
+    /*Remove Bootstrap's default image*/
+    width: 30px;
+    height: 20px;
+    position: relative;
+    display: flex;
+}
+
+header nav div button {
+    height: 40px;
+    border: solid 5px var(--mainColor);
+    margin-top: 15px;
+}
+
+/* Create custom lines for the hamburger icon */
+.navbar-toggler-icon .line3,
+.navbar-toggler-icon .line2,
+.navbar-toggler-icon .line1 {
+    content: '';
+    display: block;
+    margin-left: 15%;
+    width: 70%;
+    height: 2px;
+    background-color: var(--secondColor);
+    /* Change this to the color you want for the lines */
+    position: absolute;
+    left: 0;
+    transition: all 0.2s ease;
+}
+
+/* Position the lines */
+.navbar-toggler-icon .line1 {
+    top: 0;
+}
+
+.navbar-toggler-icon .line2 {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.navbar-toggler-icon .line3 {
+    bottom: 0;
+}
+
+/*----------------------------------------------------------------*/
+
+.dropdown-item.active,
+.dropdown-item:active {
+    color: black;
+    background-color: rgba(110, 110, 110, 0);
+}
+
+.active::before {
+    transition: 0.5s;
+    background-color: var(--mainColor);
+    content: "";
+    display: block;
+    width: 100% !important;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/*End of Nav Bar*/
+
+
+
+
+/*------------------- Home Page -------------------*/
+
+@media (max-width: 992px) {
+    .home {
+        height: 90vh !important;
+    }
+
+    .home section {
+        width: 90% !important;
+    }
+
+    .home section h2 {
+        font-size: 3rem !important;
+    }
+
+    .home aside {
+        display: none;
+    }
+}
+
+.homeBody {
+    background-color: var(--touchColor);
+}
+
+#background-video {
+    position: fixed; /* Fixed position so the video stays in the background */
+    right: 0;
+    bottom: 0;
+    min-width: 100%; /* Make the video fill the screen */
+    min-height: 100%;
+    z-index: -1; /* Ensures the video is behind content */
+    object-fit: cover; /* Ensures the video covers the entire screen */
+}
+.colorLight {
+    color: var(--secondColor);
+}
+.label {
+    height: 1px;
+}
+
+.home {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-p {
+    font-size: 1.2rem;
+}
+
+.home section {
+    width: 50%;
+    animation: fadeRight 0.8s ease-in;
+}
+
+.home aside {
+    width: 30%;
+    animation: fadeLeft 0.8s ease-in;
+}
+
+.home section h2 {
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.home aside div {
+    width: 400px;
+    height: 400px;
+}
+
+.main-image {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+@keyframes fadeLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/*---------button-------*/
+.workBtn {
+    position: relative;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--mainColor);
+    /* Initial text color */
+    border: 2px solid var(--mainColor);
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 50px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    z-index: 1;
+}
+
+.workBtn:hover {
+    transform: translateY(-4px);
+    /* Lifting effect */
+    color: var(--secondColor);
+    /* Change text color on hover */
+    background-color: var(--touchColor);
+    box-shadow: 2px 4px 8px rgba(8, 7, 7, 0.5);
+}
+
+/* Circles */
+.workBtn::before,
+.workBtn::after,
+.workBtn .circle1,
+.workBtn .circle2 {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--mainColor);
+    border-radius: 50%;
+    transition: all 0.6s ease;
+    z-index: -1;
+}
+
+.workBtn::before {
+    top: -40%;
+    left: 15%;
+}
+
+.workBtn::after {
+    bottom: -40%;
+    right: 15%;
+}
+
+.workBtn .circle1 {
+    top: -40%;
+    right: 0%;
+}
+
+.workBtn .circle2 {
+    bottom: -40%;
+    left: 0%;
+}
+
+/* On hover - Circles expand to fill the button */
+.workBtn:hover::before,
+.workBtn:hover::after,
+.workBtn:hover .circle1,
+.workBtn:hover .circle2 {
+    width: 105%;
+    height: 105%;
+    border-radius: 25%;
+    background-color: var(--mainColor);
+    transition: all 0.6s ease;
+}
+
+.workBtn:hover::before {
+    transition: all 1s ease;
+}
+
+.workBtn:hover::after {
+    transition: all 1s ease;
+}
+
+.workBtn:active {
+    transform: translateY(2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.workBtn a span {
+    color: var(--mainColor);
+}
+
+.workBtn:hover a span {
+    color: var(--secondColor);
+}
+
+/*----------------------------------------------------------------*/
+
+/*footer*/
+footer {
+    background-color: var(--secondColor);
+    color: var(--touchColor);
+    animation: fadeIn 0.5s ease-in;
+
+}
+
+footer a {
+    color: var(--touchColor);
+    /* Text color for links */
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--mainColor);
+    /* Bright orange on hover */
+}
+
+footer .btn-floating {
+    border: 2px solid var(--touchColor);
+    /* Add a border around the social icons */
+    color: var(--touchColor);
+    /* Icon color */
+    transition: all 0.3s ease;
+}
+
+footer .btn-floating:hover {
+    background-color: var(--mainColor);
+    /* Fill icons with main color on hover */
+    border-color: var(--mainColor);
+    color: var(--secondColor);
+    /* Make the icons or text lighter on hover */
+}
+
+/* Background for the copyright area */
+footer .p-3 {
+    background-color: var(--touchColor);
+    /* Black background */
+    color: var(--secondColor);
+    /* Light text */
+}
+
+.copyName {
+    color: var(--secondColor) !important;
+}
+
+/* End of Footer */
+
+/*------------Contact-----------*/
+
+.contactPage header {
+    z-index: 1;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: -1px;
+}
+
+.contact .image-section img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+    border-radius: 100px;
+}
+
+.contact footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.contact-section {
+    text-align: center;
+    background-color: var(--secondColor);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 120px;
+    animation: fadeIn 1s ease-in;
+
+}
+
+.contact-section h1 {
+    color: var(--mainColor);
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+
+.contact-section .social-icons a {
+    margin: 0 10px;
+    color: var(--touchColor);
+    font-size: 2rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-section .social-icons a:hover {
+    color: var(--mainColor);
+    transform: scale(1.2);
+}
+
+.contact-section .contact-info {
+    margin-top: 30px;
+}
+
+.contact-section .contact-info p {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.contact-section .contact-info i {
+    margin-right: 10px;
+    color: var(--mainColor);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Button Styling */
+.contact-btn {
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    color: var(--secondColor);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: var(--mainColor);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    margin-top: 20px;
+}
+
+.contact-btn:hover {
+    background-color: var(--touchColor);
+    color: var(--secondColor);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.contact-btn a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.contact-section .contact-info p a {
+    color: var(--touchColor);
+}
+
+/*-------------------------------------------------*/
+
+/*Projects*/
+
+
+.projectMain {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.name {
+    margin-top: 69px;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    animation: fadeIn 1s ease;
+
+}
+
+.name h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.name::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 40%;
+    height: 2px;
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+    animation: widthMax 0.5s ease;
+
+}
+
+.name::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 40%;
+    height: 2px;
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+    animation: widthMax 0.5s ease;
+}
+
+@keyframes widthMax {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 40%;
+    }
+}
+
+@keyframes widthMaxMobile {
+    0% {
+        opacity: 0;
+        width: 0;
+    }
+
+    100% {
+        opacity: 1;
+        width: 20%;
+    }
+}
+
+
+.videos {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: fadeOut 1s ease;
+    /* align-items: center; */
+}
+
+/*Video*/
+
+.video-card {
+    position: relative;
+    width: 480px;
+    height: 270px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 1px 4px 8px rgba(8, 7, 7, 0.5);
+    cursor: pointer;
+    margin: 20px;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.hover-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(0, 0, 0, 0.6); */
+    color: white;
+    opacity: 0;
+    padding: 2px 5px;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.hover-content p {
+    transform: translateY(-10px);
+}
+
+/* .video-card:hover .video {
+    transform: scale(1.1);
+} */
+
+.video-card:hover .hover-content {
+    opacity: 1;
+}
+
+@media (max-width: 992px) {
+    .video-card {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        border: none;
+    }
+
+    .video {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .videos a {
+        width: 100%;
+        margin-bottom: 30px;
+        height: auto;
+    }
+
+    .name {
+        margin-top: 0px;
+    }
+
+    .name::after,
+    .name::before {
+        width: 20%;
+        animation: widthMaxMobile 0.5s ease;
+    }
+}
+
+
+/*-------------------------------------------------*/
+
+/*Details page*/
+
+.detailsMain {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.detailsMain .description {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-top: 100px;
+}
+
+.details-element {
+    margin-top: 20px;
+}
+
+.details-video-container {
+    position: relative;
+    display: inline-block;
+    width: 75%;
+}
+
+.details-video-container video {
+    width: 100%;
+}
+
+.mute-button {
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mute-button i {
+    transition: color 0.3s;
+}
+
+.mute-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.videoDescription p {
+    margin-bottom: 30px;
+}
+
+
+
+
+.detailsMain .name::after {
+    width: 30%;
+    animation: widthMaxDetails 0.5s ease;
+}
+
+.detailsMain .name::before {
+    width: 30%;
+    animation: widthMaxDetails 0.5s ease;
+
+}
+
+
+@keyframes widthMaxDetails {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 30%;
+    }
+}
+
+
+@keyframes widthMaxMobileDetails {
+    0% {
+        opacity: 0;
+        width: 5%;
+    }
+
+    100% {
+        opacity: 1;
+        width: 5%;
+    }
+}
+
+@media(max-width: 992px) {
+    .detailsMain .description img {
+        width: 100%;
+        height: auto;
+    }
+
+
+
+    .details-video-container {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+    }
+
+    .detailsMain .name::after {
+        width: 0%;
+        animation: widthMaxMobileDetails 0.5s ease;
+    }
+
+    .detailsMain .name::before {
+        width: 0%;
+        animation: widthMaxMobileDetails 0.5s ease;
+
+    }
+    .detailsMain .name h3 {
+        font-size: 2rem !important;
+    }
+}
+
+.detailsMain .description h4 {
+    font-size: 2rem;
+    color: var(--mainColor);
+}
+
+
+
+/*----------------------WorkOut---------------------------*/
+
+/* Set the section width and center it */
+.animation-section {
+    width: 70%;
+    margin: 0 auto;
+    /* Center the section */
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Set the size and layout for each animation container */
+.description2 {
+    width: 50%;
+    height: 400px;
+    /* Set the height of each container */
+    background-color: #f0f0f0;
+    /* Optional background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+@media(max-width: 992px) {
+    .animation-section {
+        width: 100%;
+
+    }
+    .description2 {
+        width: 100%;
+        height: 20%;
+    }
+}
+
+.animation-section h4{
+    margin-top: 50px;
+}
